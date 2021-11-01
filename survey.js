@@ -5,21 +5,21 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-rl.question("What's your name? Nicknames are also acceptable :) ", (name) => {
-  rl.question("What's an activity you like doing? ", (activity) => {
-    rl.question("What do you listen to while doing that? ", (musicTaste) => {
+rl.question("What's your name? Nicknames are also acceptable :) ", name => {
+  rl.question("What's an activity you like doing? ", activity => {
+    rl.question("What do you listen to while doing that? ", musicTaste => {
       rl.question(
         "Which meal is your favourite (eg: dinner, brunch, etc.) ",
-        (favMeal) => {
+        favMeal => {
           rl.question(
             "What's your favourite thing to eat for that meal? ",
-            (favFood) => {
+            favFood => {
               rl.question(
                 "Which sport is your absolute favourite? ",
-                (favSport) => {
+                favSport => {
                   rl.question(
                     "What is your superpower? In a few words, tell us what you are amazing at! ",
-                    (superpower) => {
+                    superpower => {
                       console.log(`${name} loves listening to ${musicTaste} while ${activity}, devouring ${favFood} for ${favMeal}, prefers ${favSport} over any other sport, and is amazing at ${superpower}.
                     `);
                       rl.close();
@@ -34,11 +34,3 @@ rl.question("What's your name? Nicknames are also acceptable :) ", (name) => {
     });
   });
 });
-
-/* 
-What's an activity you like doing?
-What do you listen to while doing that?
-Which meal is your favourite (eg: dinner, brunch, etc.)
-What's your favourite thing to eat for that meal?
-Which sport is your absolute favourite?
-What is your superpower? In a few words, tell us what you are amazing at!*/
